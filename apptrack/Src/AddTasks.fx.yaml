@@ -1,0 +1,240 @@
+AddTasks As screen:
+
+    Rectangle1_6 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(241, 244, 249, 1)
+        Height: =106
+        Width: =1366
+        ZIndex: =1
+
+    "Gallery1_8 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        BorderColor: =RGBA(227, 234, 243, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =662
+        Items: =colNewTasks
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =183
+        Width: =1366
+        Y: =106
+        ZIndex: =2
+
+        NextArrow2_1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(99, 139, 44, 1)
+            Height: =47
+            Icon: =Icon.Add
+            OnSelect: |-
+                =Patch(colNewTasks, ThisItem, {
+                    Task: TextInput1.Text,
+                    PersonAssigned: ComboBox2.SelectedItems,
+                    'Due Date': DatePicker2.SelectedDate,
+                    Weight: Value(TextInput2.Text)});
+                
+                Collect(colNewTasks, {
+                    Task: "",
+                    PersonAssigned: ComboBox2.SelectedItems,
+                    'Due Date': Today(), 
+                    ParentID: ThisItem.ParentID,
+                    ID: Max(colNewTasks, ID)+1,
+                    Weight: Value(TextInput2.Text)});
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =102
+            X: =1256
+            Y: =47
+            ZIndex: =2
+
+        Separator2_8 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(50, 86, 160, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =3
+
+        NextArrow2_2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            Height: =60
+            Icon: =Icon.Trash
+            OnSelect: =Remove(colNewTasks, LookUp(colNewTasks, ThisItem.ID = ID))
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =1277
+            Y: =114
+            ZIndex: =4
+
+        TextInput1 As text:
+            BorderColor: =RGBA(0, 16, 96, 1)
+            Default: =ThisItem.Task
+            HintText: ="New Task"
+            HoverBorderColor: =RGBA(0, 89, 178, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Mode: =TextMode.MultiLine
+            OnSelect: =Select(Parent)
+            Width: =300
+            X: =21
+            Y: =94
+            ZIndex: =5
+
+        ComboBox2 As combobox:
+            BorderColor: =RGBA(0, 46, 92, 1)
+            ChevronBackground: =RGBA(0, 13, 75, 1)
+            ChevronHoverBackground: =RGBA(158, 160, 173, 1)
+            Color: =RGBA(0, 16, 96, 1)
+            DefaultSelectedItems: =ThisItem.PersonAssigned
+            DisplayFields: =["DisplayName"]
+            HoverBorderColor: =RGBA(241, 244, 249, 1)
+            HoverColor: =RGBA(0, 16, 96, 1)
+            HoverFill: =RGBA(230, 230, 230, 1)
+            InputTextPlaceholder: ="Search user..."
+            Items: =Choices([@Tasks].'Assigned To')
+            OnSelect: =Select(Parent)
+            PressedFill: =RGBA(0, 16, 96, 1)
+            SearchFields: =["DisplayName"]
+            SearchItems: =Choices(Tasks.'Assigned To',ComboBox2.SearchText)
+            SelectionFill: =RGBA(0, 13, 75, 1)
+            X: =399
+            Y: =94
+            ZIndex: =6
+
+        DatePicker2 As datepicker:
+            BorderColor: =RGBA(0, 16, 96, 1)
+            CalendarHeaderFill: =RGBA(0, 51, 102, 1)
+            Color: =RGBA(0, 16, 96, 1)
+            DefaultDate: =ThisItem.'Due Date'
+            HoverDateFill: =RGBA(153, 205, 255, 1)
+            IconBackground: =RGBA(0, 51, 102, 1)
+            OnSelect: =Select(Parent)
+            SelectedDateFill: =RGBA(0, 51, 102, 1)
+            Width: =200
+            X: =778
+            Y: =94
+            ZIndex: =7
+
+        TextInput2 As text:
+            BorderColor: =RGBA(39, 67, 125, 1)
+            Default: =ThisItem.Weight
+            Format: =TextFormat.Number
+            HoverBorderColor: =RGBA(0, 89, 178, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Select(Parent)
+            Width: =150
+            X: =1040
+            Y: =94
+            ZIndex: =8
+
+    Icon1_3 As icon.BackArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(50, 86, 160, 1)
+        Height: =52
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        Width: =54
+        X: =60
+        Y: =27
+        ZIndex: =3
+
+    Icon1_4 As icon.BackArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(50, 86, 160, 1)
+        Height: =52
+        Icon: =Icon.CheckBadge
+        OnSelect: |-
+            =ForAll(Gallery1_8.AllItems, 
+                Patch(Tasks, Defaults(Tasks), {
+                Title: TextInput1.Text, 
+                'Assigned To': ComboBox2.SelectedItems,
+                'Due Date': DatePicker2.SelectedDate,
+                ParentID: ThisRecord.ParentID, 
+                Complete: false,
+                Weight: Value(TextInput2.Text)})); 
+                
+               /* SendEmail2.Run(colPeople._emails, "Assigned New Task", Concatenate("Good Day ", ComboBox2.Selected.DisplayName," <br></br> You have been assigned a new task. <br> Title: ", TextInput1.Text,"<br>", " Due Date: ", DatePicker2.SelectedDate, "<br></br> Regards, <br> Team"))); */
+            
+            Patch(Task_Headings, {ID: Gallery1_7.Selected.ID}, {Completeness: (Sum(Filter(Tasks, ParentID = Gallery1_7.Selected.ID && Complete = 1), Weight))/(Sum(Filter(Tasks, ParentID = Gallery1_7.Selected.ID), Weight))});
+            
+            If(LookUp(Indicators, Number = Gallery1_7.Selected.Indicator && Year = 2022, Format).Value = "Percentage",
+            Patch(Indicators, LookUp(Indicators, Number = Gallery1_7.Selected.Indicator && Year = 2022), {'Q2 Actual': Sum(Filter(Task_Headings, Gallery1_7.Selected.Indicator = Indicator), Completeness) / CountRows(Filter(Task_Headings, Gallery1_7.Selected.Indicator = Indicator))}),
+            LookUp(Indicators, Number = Gallery1_7.Selected.Indicator && Year = 2022, Format).Value = "Number",
+            Patch(Indicators, LookUp(Indicators, Number = Gallery1_7.Selected.Indicator && Year = 2022, {'Q2 Actual': Sum(Filter(Task_Headings, Gallery1_7.Selected.Indicator = Indicator), Completeness), 'Annual Actual': Sum(Filter(Task_Headings, Gallery1_7.Selected.Indicator = Indicator), Completeness)})));
+            
+            Notify("Tasks successfully added!", Success,900);    
+                
+            Back()
+        Width: =54
+        X: =987
+        Y: =27
+        ZIndex: =4
+
+    Label2_2 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(50, 86, 160, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =52
+        Size: =33
+        Text: |-
+            =//"New Tasks: " & Gallery1.Selected.Title
+            "New Tasks"
+        Width: =558
+        X: =348
+        Y: =27
+        ZIndex: =5
+
+    Label7_5 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 16, 96, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Size: =15
+        Text: |-
+            ="Assigned to:"
+        X: =439
+        Y: =162
+        ZIndex: =6
+
+    Label8_12 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 16, 96, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Size: =15
+        Text: |-
+            ="Due Date:"
+        X: =810
+        Y: =162
+        ZIndex: =7
+
+    Label6_8 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 13, 75, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =47
+        Size: =15
+        Text: |-
+            ="Title:"
+        Width: =77
+        X: =60
+        Y: =162
+        ZIndex: =8
+
+    Label8_13 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 16, 96, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Size: =15
+        Text: |-
+            ="Weight:"
+        X: =1069
+        Y: =162
+        ZIndex: =9
+

@@ -1,0 +1,154 @@
+ManageTasks As screen:
+
+    Rectangle1_7 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(241, 244, 249, 1)
+        Height: =106
+        Width: =1366
+        ZIndex: =1
+
+    "Gallery2 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =567
+        Items: =SortByColumns(Filter(Tasks, ParentID = selectedParentID),"Order0",Ascending)
+        Layout: =Layout.Vertical
+        OnSelect: =Navigate(SelectedTask)
+        TemplatePadding: =0
+        TemplateSize: =Min(96, Self.Height - 60)
+        Width: =1366
+        Y: =129
+        ZIndex: =2
+
+        Title3 As label:
+            Color: =RGBA(39, 67, 125, 1)
+            Font: =Font.Verdana
+            Height: =36
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =442
+            X: =32
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        NextArrow2 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 89, 178, 1)
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =2
+
+        Separator3 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(0, 89, 178, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =3
+
+        Label3_51 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(50, 86, 160, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Bold
+            Height: =96
+            OnSelect: =Select(Parent)
+            Size: =17
+            Text: ="Complete?"
+            X: =583
+            ZIndex: =4
+
+        Label4_8 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =If(ThisItem.Complete, Green, Red)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Bold
+            Height: =96
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =If(ThisItem.Complete, "Yes", "No")
+            Width: =82
+            X: =1052
+            ZIndex: =5
+
+    Icon1_5 As icon.BackArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(50, 86, 160, 1)
+        Height: =56
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(TaskGroups)
+        Width: =82
+        X: =54
+        Y: =25
+        ZIndex: =3
+
+    Label2_3 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(50, 86, 160, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =69
+        Size: =33
+        Text: |-
+            =//"Existing Tasks: " & Gallery1.Selected.Title
+            "Existing Tasks"
+        Width: =785
+        X: =330
+        Y: =12
+        ZIndex: =4
+
+    Button2_3 As button:
+        Color: =RGBA(39, 67, 125, 1)
+        Fill: =RGBA(241, 244, 249, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =48
+        HoverFill: =RGBA(0, 16, 96, 1)
+        OnSelect: |-
+            =ClearCollect(colNewTasks, {
+                Task: "", 
+                PersonAssigned:Blank(),
+                DueDate: Now(),
+                ParentID: Gallery1.Selected.ID,
+                ID: 1});
+            Navigate(AddTasks)
+        PressedBorderColor: =RGBA(0, 16, 96, 1)
+        PressedColor: =Self.Color
+        PressedFill: =Self.Fill
+        Text: ="Add Tasks"
+        X: =643
+        Y: =720
+        ZIndex: =5
+
+    Label10_7 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 62, 125, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =59
+        Size: =30
+        Text: ="Empty Set"
+        Visible: =If(CountRows(Gallery2.AllItems) = 0, true,false)
+        Width: =252
+        X: =597
+        Y: =415
+        ZIndex: =7
+

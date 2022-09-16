@@ -1,0 +1,9 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Set(_currentQuarter, 
+        If(Value(Text(Today(), "mm")) >=1 && Value(Text(Today(), "mm")) <=3, "Q4",
+           Value(Text(Today(), "mm")) >=4 && Value(Text(Today(), "mm")) <=6, "Q1",
+           Value(Text(Today(), "mm")) >=7 && Value(Text(Today(), "mm")) <=9, "Q2",
+           Value(Text(Today(), "mm")) >=10 && Value(Text(Today(), "mm")) <=12, "Q3"))
+

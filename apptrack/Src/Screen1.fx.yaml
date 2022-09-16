@@ -1,0 +1,616 @@
+Screen1 As screen:
+
+    "Gallery1_4 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =674
+        Items: |-
+            =Filter(Indicators, ID = selectedIndicator.ID)
+            //Filter(Indicators,Year=Year(Now()))
+            
+            //Filter(Indicators, Year=Year.Now())
+            
+            //First(Sort(Tabela1;'Nº de Obra';Descending)).'Nº de Obra'
+            
+            //Filter(Indicators,Max(Year))/
+            //Collect(_years, { Years: LookUp(Indicators, 
+            
+            //Max(Filter(Indicators,'Programme Number'=Dropdown2.Selected.'Programme number'),Year)
+            
+            //Sort(Filter(Indicators,'Programme Number'=Dropdown2.Selected.'Programme number'),Year,Descending)
+            
+            /*Sort(
+                If(
+                    Dropdown2.Selected.Title = "All",
+                    Indicators,
+                    Filter(
+                        Indicators,
+                        'Programme Number' = Dropdown2.Selected.'Programme number'
+                    )
+                ),
+                Year,
+                Descending
+            )*/
+            
+            //First(SortByColumns(Filter('SPList', List=Dropdown1.Selected.Value), "Column1", Descending)).Column1
+            
+            //SortByColumns(Filter(Indicators,'Programme Number'=Dropdown2.Selected.'Programme number'),"Year",Descending)
+            
+            //Filter(Indicators, Years= Year(Now()))
+        Layout: =Layout.Vertical
+        TemplateFill: =//f('Q1 Target_DataCard1' < Label8_1.Text,Color.Red)
+        TemplatePadding: =0
+        TemplateSize: =674
+        Width: =1366
+        Y: =94
+        ZIndex: =1
+
+        lblQ1TargetScore_6 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1_1.Fill
+            Height: =Label4_6.Height
+            OnSelect: =Select(Parent)
+            Text: =""
+            Width: =Label4_6.Width + 4
+            X: =405
+            Y: =Label4_6.Y
+            ZIndex: =1
+
+        Label1_6 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1TargetScore_6.Fill
+            Height: =Label5_4.Height
+            OnSelect: =Select(Parent)
+            Text: =""
+            Width: =imgQ1indicator_1.Width + 4
+            X: =imgQ1indicator_1.X
+            Y: =Label5_4.Y
+            ZIndex: =2
+
+        Label6_6 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1TargetScore_6.Fill
+            Height: =Label7_4.Height
+            OnSelect: =Select(Parent)
+            Text: =""
+            Width: =imgQ1indicator_1.Width + 4
+            X: =imgQ1indicator_1.X
+            Y: =Label7_4.Y
+            ZIndex: =3
+
+        Label8_11 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1TargetScore_6.Fill
+            Height: =Label8_10.Height
+            OnSelect: =Select(Parent)
+            Text: =""
+            Width: =imgQ1indicator_1.Width + 4
+            X: =imgQ1indicator_1.X
+            Y: =Label8_10.Y
+            ZIndex: =4
+
+        Title2_4 As label:
+            Color: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(241, 244, 249, 1)
+            Height: =101
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =27
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =1222
+            X: =96
+            Y: =4
+            ZIndex: =6
+
+        Separator2_4 As rectangle:
+            Height: =0
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 2
+            ZIndex: =7
+
+        lblQ1TargetScore_5 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1_1.Fill
+            Height: =lblQ1_1.Height
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'Q1 Target'
+            Width: =Label3_43.Width
+            X: =lblQuarterTitle_1.X+lblQuarterTitle_1.Width
+            Y: =203
+            ZIndex: =9
+
+        lblQ1_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =RGBA(215, 223, 240, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =91
+            OnSelect: =Select(Parent)
+            Text: ="Q1"
+            Width: =lblQuarterTitle_1.Width
+            X: =65
+            Y: =203
+            ZIndex: =10
+
+        Label4_6 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: |-
+                =If(IsBlank(ThisItem.'Q1 Actual'),RGBA(215, 223, 240, 1),
+                    Value(ThisItem.'Q1 Actual')<Value(ThisItem.'Q1 Target'), Red,
+                Value(ThisItem.'Q1 Actual')>=Value(ThisItem.'Q1 Target'), Green)
+                
+                //If(Value(ThisItem.Q1ActualTarget)>Value(ThisItem.Q1Target), Red,RGBA(215, 223, 240, 1))
+            Height: =lblQ1TargetScore_5.Height
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'Q1 Actual'
+            Width: =lblQ1TargetScore_5.Width
+            X: =289
+            Y: =203
+            ZIndex: =11
+
+        lblQuarterTitle_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1_1.Fill
+            FontWeight: =Bold
+            Height: =91
+            OnSelect: =Select(Parent)
+            Text: ="Quarter"
+            Width: =111
+            X: =65
+            Y: =112
+            ZIndex: =12
+
+        lblQ2_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1_1.Fill
+            FontWeight: =FontWeight.Semibold
+            Height: =91
+            OnSelect: =Select(Parent)
+            Text: ="Q2"
+            Width: =lblQuarterTitle_1.Width
+            X: =65
+            Y: =295
+            ZIndex: =13
+
+        Label3_43 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQuarterTitle_1.Fill
+            FontWeight: =Bold
+            Height: =lblQuarterTitle_1.Height
+            OnSelect: =Select(Parent)
+            Text: ="Target"
+            Width: =lblQuarterTitle_1.Width
+            X: =lblQuarterTitle_1.X+lblQuarterTitle_1.Width
+            Y: =112
+            ZIndex: =14
+
+        Label1_5 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1TargetScore_5.Fill
+            Height: =lblQ2_1.Height
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'Q2 Target'
+            Width: =lblQ2_1.Width
+            X: =lblQuarterTitle_1.X+lblQuarterTitle_1.Width
+            Y: =295
+            ZIndex: =15
+
+        Label5_4 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: |-
+                =If(IsBlank(ThisItem.'Q2 Actual'),RGBA(215, 223, 240, 1),
+                    Value(ThisItem.'Q2 Actual')<Value(ThisItem.'Q2 Target'), Red,
+                Value(ThisItem.'Q2 Actual')>=Value(ThisItem.'Q2 Target'), Green)
+            Height: =Label1_5.Height
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'Q2 Actual'
+            Width: =Label1_5.Width
+            X: =289
+            Y: =295
+            ZIndex: =16
+
+        lblQ3_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1_1.Fill
+            FontWeight: =FontWeight.Semibold
+            Height: =91
+            OnSelect: =Select(Parent)
+            Text: ="Q3"
+            Width: =lblQuarterTitle_1.Width
+            X: =65
+            Y: =388
+            ZIndex: =17
+
+        Label3_44 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQuarterTitle_1.Fill
+            FontWeight: =Bold
+            Height: =92
+            OnSelect: =Select(Parent)
+            Text: ="Actual"
+            Width: =Label3_43.Width*2 + 10
+            X: =289
+            Y: =111
+            ZIndex: =18
+
+        Label6_5 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1TargetScore_5.Fill
+            Height: =lblQ3_1.Height
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'Q3 Target'
+            Width: =lblQ3_1.Width
+            X: =lblQuarterTitle_1.X+lblQuarterTitle_1.Width
+            Y: =388
+            ZIndex: =19
+
+        Label7_4 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: |-
+                =If(IsBlank(ThisItem.'Q3 Actual'),RGBA(215, 223, 240, 1),
+                    Value(ThisItem.'Q3 Actual')<Value(ThisItem.'Q3 Target'), Red,
+                Value(ThisItem.'Q3 Actual')>=Value(ThisItem.'Q3 Target'), Green)
+            Height: =Label6_5.Height
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'Q3 Actual'
+            Width: =Label6_5.Width
+            X: =289
+            Y: =388
+            ZIndex: =20
+
+        lblQ4_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1_1.Fill
+            FontWeight: =FontWeight.Semibold
+            Height: =91
+            OnSelect: =Select(Parent)
+            Text: ="Q4"
+            Width: =lblQuarterTitle_1.Width
+            X: =65
+            Y: =481
+            ZIndex: =21
+
+        Label8_9 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1TargetScore_5.Fill
+            Height: =lblQ4_1.Height
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'Q4 Target'
+            Width: =lblQ4_1.Width
+            X: =lblQuarterTitle_1.X+lblQuarterTitle_1.Width
+            Y: =481
+            ZIndex: =22
+
+        Label8_10 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: |-
+                =If(IsBlank(ThisItem.'Q4 Actual'),RGBA(215, 223, 240, 1),
+                    Value(ThisItem.'Q4 Actual')<Value(ThisItem.'Q4 Target'), Red,
+                Value(ThisItem.'Q4 Actual')>=Value(ThisItem.'Q4 Target'), Green)
+            Height: =Label8_9.Height
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'Q4 Actual'
+            Width: =Label8_9.Width
+            X: =289
+            Y: =481
+            ZIndex: =23
+
+        Label3_45 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1_1.Fill
+            FontWeight: =Bold
+            Height: =75
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: ="Annual Target"
+            Width: =200
+            X: =556
+            Y: =239
+            ZIndex: =24
+
+        Label3_46 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1TargetScore_5.Fill
+            Height: =75
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: =ThisItem.'Annual Target'
+            Width: =Label3_45.Width
+            X: =756
+            Y: =239
+            ZIndex: =25
+
+        Label3_47 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1_1.Fill
+            FontWeight: =Bold
+            Height: =75
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: ="Annual Actual"
+            Width: =200
+            X: =556
+            Y: =315
+            ZIndex: =26
+
+        Label3_48 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: |-
+                =If(IsBlank(ThisItem.'Annual Actual'),RGBA(215, 223, 240, 1),
+                    Value(ThisItem.'Annual Actual')<Value(ThisItem.'Annual Target'), Red,
+                Value(ThisItem.'Annual Actual')>=Value(ThisItem.'Annual Target'), Green)
+            Height: =75
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: =ThisItem.'Annual Actual'
+            Width: =200
+            X: =756
+            Y: =315
+            ZIndex: =27
+
+        Label10_4 As label:
+            Align: =Align.Center
+            Color: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(241, 244, 249, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =101
+            OnSelect: =Select(Parent)
+            Size: =27
+            Text: =ThisItem.Number
+            Width: =65
+            X: =31
+            Y: =4
+            ZIndex: =28
+
+        Label3_49 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1_1.Fill
+            FontWeight: =Bold
+            Height: =lblQ4_1.Height
+            OnSelect: =Select(Parent)
+            Text: ="Target for MTFS"
+            Width: =200
+            X: =556
+            Y: =384
+            ZIndex: =30
+
+        Label3_50 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =2
+            Fill: =lblQ1TargetScore_5.Fill
+            Height: =lblQ4_1.Height
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.'Target for MTFS'
+            Width: =200
+            X: =756
+            Y: =384
+            ZIndex: =31
+
+        Label11_2 As label:
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.Year
+            Visible: =false
+            X: =96
+            Y: =36
+            ZIndex: =32
+
+        imgQ1indicator_1 As image:
+            Height: =Label4_6.Height
+            Image: |
+                =With(
+                    {
+                        SVGArch: "<path d='M 0 50 A 50 50 0 0 1 100 50 L80 50 A 30 30 0 0 0 20 50' /> ",
+                        TopRotate: -180 * (1 - If(Value(ThisItem.'Q1 Actual')<=Value(ThisItem.'Q1 Target') And Value(ThisItem.'Q1 Target') <> 0,
+                        ThisItem.'Q1 Actual'/ThisItem.'Q1 Target',1))
+                    },
+                    "data:image/svg+xml;utf8, " & EncodeUrl(
+                        "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'>
+                            <g fill='Red'>" & SVGArch & "</g>
+                            <g fill='Green' transform='rotate(" & TopRotate & " 50 50)'>" & SVGArch & "</g>
+                            
+                    </svg>"
+                    )
+                )
+            OnSelect: =Select(Parent)
+            Width: =Label4_6.Width
+            X: =405
+            Y: =203
+            ZIndex: =33
+
+        imgQ2indicator_1 As image:
+            Height: =Label8_10.Height
+            Image: |-
+                =With(
+                    {
+                        SVGArch: "<path d='M 0 50 A 50 50 0 0 1 100 50 L80 50 A 30 30 0 0 0 20 50' /> ",
+                        TopRotate: -180 * (1 - If(Value(ThisItem.'Q4 Actual')<=Value(ThisItem.'Q4 Target') And Value(ThisItem.'Q4 Target') <> 0,
+                        ThisItem.'Q4 Actual'/ThisItem.'Q4 Target',1))
+                    },
+                    "data:image/svg+xml;utf8, " & EncodeUrl(
+                        "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'>
+                            <g fill='Red'>" & SVGArch & "</g>
+                            <g fill='Green' transform='rotate(" & TopRotate & " 50 50)'>" & SVGArch & "</g>
+                            
+                    </svg>"
+                    )
+                )
+            OnSelect: =Select(Parent)
+            Width: =imgQ1indicator_1.Width
+            X: =imgQ1indicator_1.X
+            Y: =481
+            ZIndex: =34
+
+        imgQ3indicator_2 As image:
+            Height: =Label5_4.Height
+            Image: |
+                =/*With(
+                    {
+                        SVGArch: "<path d='M 0 50 A 50 50 0 0 1 100 50 L80 50 A 30 30 0 0 0 20 50' /> ",
+                        TopRotate: -180 * (1 - If(Value(ThisItem.'Q3 Actual')<=Value(ThisItem.'Q3 Target') And Value(ThisItem.'Q3 Target') <> 0,
+                        ThisItem.'Q3 Actual'/ThisItem.'Q3 Target',1))
+                    },
+                    "data:image/svg+xml;utf8, " & EncodeUrl(
+                        "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'>
+                            <g fill='Red'>" & SVGArch & "</g>
+                            <g fill='Green' transform='rotate(" & TopRotate & " 50 50)'>" & SVGArch & "</g>
+                            
+                    </svg>"
+                    )
+                )
+                */
+                With(
+                    {
+                        SVGArch: "<path d='M 0 50 A 50 50 0 0 1 100 50 L80 50 A 30 30 0 0 0 20 50' /> ",
+                        TopRotate: -180 * (1 - If(Value(ThisItem.'Q2 Actual')<=Value(ThisItem.'Q2 Target') And Value(ThisItem.'Q2 Target') <> 0,
+                        ThisItem.'Q2 Actual'/ThisItem.'Q2 Target',1))
+                    },
+                    "data:image/svg+xml;utf8, " & EncodeUrl(
+                        "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'>
+                            <g fill='Red'>" & SVGArch & "</g>
+                            <g fill='Green' transform='rotate(" & TopRotate & " 50 50)'>" & SVGArch & "</g>
+                            
+                    </svg>"
+                    )
+                )
+            OnSelect: =Select(Parent)
+            Width: =imgQ1indicator_1.Width
+            X: =408
+            Y: =293
+            ZIndex: =35
+
+        imgQ3indicator_3 As image:
+            Height: =Label7_4.Height
+            Image: |
+                =/*With(
+                    {
+                        SVGArch: "<path d='M 0 50 A 50 50 0 0 1 100 50 L80 50 A 30 30 0 0 0 20 50' /> ",
+                        TopRotate: -180 * (1 - If(Value(ThisItem.'Q4 Actual')<=Value(ThisItem.'Q4 Target') And Value(ThisItem.'Q4 Target') <> 0,
+                        ThisItem.'Q4 Actual'/ThisItem.'Q4 Target',1))
+                    },
+                    "data:image/svg+xml;utf8, " & EncodeUrl(
+                        "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'>
+                            <g fill='Red'>" & SVGArch & "</g>
+                            <g fill='Green' transform='rotate(" & TopRotate & " 50 50)'>" & SVGArch & "</g>
+                            
+                    </svg>"
+                    )
+                )*/
+                
+                With(
+                    {
+                        SVGArch: "<path d='M 0 50 A 50 50 0 0 1 100 50 L80 50 A 30 30 0 0 0 20 50' /> ",
+                        TopRotate: -180 * (1 - If(Value(ThisItem.'Q3 Actual')<=Value(ThisItem.'Q3 Target') And Value(ThisItem.'Q3 Target') <> 0,
+                        ThisItem.'Q3 Actual'/ThisItem.'Q3 Target',1))
+                    },
+                    "data:image/svg+xml;utf8, " & EncodeUrl(
+                        "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'>
+                            <g fill='Red'>" & SVGArch & "</g>
+                            <g fill='Green' transform='rotate(" & TopRotate & " 50 50)'>" & SVGArch & "</g>
+                            
+                    </svg>"
+                    )
+                )
+            OnSelect: =Select(Parent)
+            Width: =imgQ1indicator_1.Width
+            X: =imgQ1indicator_1.X
+            Y: =388
+            ZIndex: =36
+
+        PieChart1_1 As pieChart:
+            Height: =465
+            ItemColorSet: =[Green,Red, RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            Items: |-
+                =Table({Number:Value(ThisItem.'Annual Actual'),label: "Achieved"}, {Number:Value(ThisItem.'Annual Target')-Value(ThisItem.'Annual Actual'),label: "Remaining"})
+            OnSelect: =Select(Parent)
+            Width: =455
+            X: =911
+            Y: =105
+            ZIndex: =39
+
+        Label13_1 As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Semibold
+            Italic: =true
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: ="Annual Performance"
+            X: =1062
+            Y: =354
+            ZIndex: =40
+
+    Icon1_1 As icon.BackArrow:
+        Color: =RGBA(136, 160, 209, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(Dashboard_Graphical);
+        X: =12
+        Y: =16
+        ZIndex: =2
+
+    Image1_3 As image:
+        Height: =94
+        Image: ='western-cape-department-of-human-settlements_orig'
+        Width: =241
+        X: =1125
+        ZIndex: =3
+
+    Icon2 As icon.PhoneHangUp:
+        Icon: =Icon.Print
+        OnSelect: =Print()
+        X: =601
+        Y: =16
+        ZIndex: =4
+

@@ -1,0 +1,166 @@
+AddTaskGroups As screen:
+
+    Rectangle1_9 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(241, 244, 249, 1)
+        Height: =106
+        Width: =1366
+        ZIndex: =1
+
+    "Gallery1_9 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        BorderColor: =RGBA(227, 234, 243, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =662
+        Items: =colNewTaskGroups
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =150
+        Width: =1366
+        Y: =106
+        ZIndex: =2
+
+        NextArrow2_3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(99, 139, 44, 1)
+            Height: =47
+            Icon: =Icon.Add
+            OnSelect: |-
+                =Patch(colNewTaskGroups, ThisItem, {
+                    Name: TextInput1_1.Text});
+                
+                Collect(colNewTaskGroups, {
+                    Name: "",
+                    ID: Max(colNewTaskGroups, ID)+1})
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =102
+            X: =1246
+            Y: =12
+            ZIndex: =2
+
+        Separator2_9 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(50, 86, 160, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =3
+
+        NextArrow2_4 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            Height: =60
+            Icon: =Icon.Trash
+            OnSelect: =Remove(colNewTaskGroups, LookUp(colNewTaskGroups, ThisItem.ID = ID))
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =1267
+            Y: =79
+            ZIndex: =4
+
+        TextInput1_1 As text:
+            BorderColor: =RGBA(0, 16, 96, 1)
+            Default: =ThisItem.Name
+            Height: =55
+            HintText: ="New Task Group"
+            HoverBorderColor: =RGBA(0, 89, 178, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Mode: =TextMode.MultiLine
+            OnSelect: =Select(Parent)
+            Width: =352
+            X: =23
+            Y: =76
+            ZIndex: =5
+
+    Icon1_7 As icon.BackArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(50, 86, 160, 1)
+        Height: =52
+        Icon: =Icon.BackArrow
+        OnSelect: =Back()
+        Width: =54
+        X: =60
+        Y: =27
+        ZIndex: =3
+
+    Icon1_8 As icon.BackArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(50, 86, 160, 1)
+        Height: =52
+        Icon: =Icon.CheckBadge
+        OnSelect: |-
+            =ForAll(Gallery1_9.AllItems, 
+               Patch(Task_Headings, Defaults(Task_Headings), {
+                Title: TextInput1_1.Text, 
+                Indicator: selectedIndicator.Number,
+                Completeness: 0}
+            )); 
+                
+               /* SendEmail2.Run(colPeople._emails, "Assigned New Task", Concatenate("Good Day ", ComboBox2.Selected.DisplayName," <br></br> You have been assigned a new task. <br> Title: ", TextInput1.Text,"<br>", " Due Date: ", DatePicker2.SelectedDate, "<br></br> Regards, <br> Team"))); */
+            
+            Notify("Tasks Headings added!", Success,900);    
+                
+            Back()
+        Width: =54
+        X: =987
+        Y: =27
+        ZIndex: =4
+
+    Label2_5 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(50, 86, 160, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =52
+        Size: =33
+        Text: ="New Tasks Groups"
+        Width: =558
+        X: =404
+        Y: =27
+        ZIndex: =5
+
+    Label6_12 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 13, 75, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =39
+        Size: =15
+        Text: |-
+            ="Group Title:"
+        Width: =152
+        X: =60
+        Y: =134
+        ZIndex: =8
+
+    Label6_13 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 13, 75, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =59
+        Text: |-
+            ="Attached Indicator: "
+        Width: =112
+        X: =1254
+        ZIndex: =9
+
+    Label6_14 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(128, 128, 128, 1)
+        Font: =Font.'Courier New'
+        FontWeight: =FontWeight.Bold
+        Height: =47
+        Size: =17
+        Text: =selectedIndicator.Number
+        Width: =113
+        X: =1253
+        Y: =59
+        ZIndex: =10
+

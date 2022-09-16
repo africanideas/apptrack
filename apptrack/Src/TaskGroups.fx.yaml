@@ -1,0 +1,230 @@
+TaskGroups As screen:
+
+    Rectangle1_5 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(241, 244, 249, 1)
+        Height: =106
+        Width: =1366
+        ZIndex: =1
+
+    "Gallery1_7 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+        BorderColor: =RGBA(204, 222, 240, 1)
+        BorderThickness: =1
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =662
+        Items: =Filter(Task_Headings, Indicator = selectedIndicator.Number)
+        Layout: =Layout.Vertical
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =216
+        Visible: =!IsEmpty(Self.AllItems)
+        Width: =1366
+        Y: =106
+        ZIndex: =2
+
+        Title2_7 As label:
+            Color: =RGBA(50, 86, 160, 1)
+            Font: =Font.Verdana
+            Height: =137
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =22
+            Text: =ThisItem.Title
+            Width: =395
+            X: =12
+            ZIndex: =1
+
+        Separator2_7 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(50, 86, 160, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =3
+
+        Title2_8 As label:
+            Color: =RGBA(39, 113, 194, 1)
+            Font: =Font.Verdana
+            Height: =79
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =19.5
+            Text: |-
+                ="Type: " &ThisItem.Category
+            Visible: =false
+            Width: =354
+            X: =12
+            Y: =137
+            ZIndex: =4
+
+        Button2_2 As button:
+            Fill: =RGBA(0, 94, 146, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =52
+            HoverColor: =RGBA(0, 94, 146, 1)
+            HoverFill: =RGBA(241, 244, 249, 1)
+            OnSelect: |-
+                =Set(selectedParentID, ThisItem.ID);
+                Set(selectedParent, ThisItem.Title);
+                Navigate(ManageTasks);
+            PressedBorderColor: =RGBA(241, 244, 249, 1)
+            PressedColor: =Self.Color
+            PressedFill: =Self.Fill
+            Text: ="Manage Tasks"
+            X: =1164
+            Y: =137
+            ZIndex: =5
+
+        Button2_1 As button:
+            Color: =RGBA(39, 67, 125, 1)
+            Fill: =RGBA(241, 244, 249, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =52
+            HoverFill: =RGBA(0, 16, 96, 1)
+            OnSelect: |-
+                =ClearCollect(colNewTasks, {
+                    Task: "", 
+                    PersonAssigned:Blank(),
+                    DueDate: Now(),
+                    ParentID: ThisItem.ID,
+                    ID: 1,
+                    Weight: 0});
+                Navigate(AddTasks)
+            PressedBorderColor: =RGBA(0, 16, 96, 1)
+            PressedColor: =Self.Color
+            PressedFill: =Self.Fill
+            Text: ="Add Tasks"
+            X: =1164
+            Y: =29
+            ZIndex: =6
+
+        Label5_5 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 94, 146, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Semibold
+            Height: =186
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: |-
+                =Concatenate("Tasks : ",CountRows(Filter(Tasks, ParentID = ThisItem.ID)))
+            X: =824
+            Y: =16
+            ZIndex: =7
+
+        Label5_8 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(102, 182, 227, 1)
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Bold
+            Height: =156
+            OnSelect: =Select(Parent)
+            Size: =18
+            Text: |-
+                ="Completion: "& Round(ThisItem.Completeness * 100, 2) & "%"
+                
+                /*Round((CountRows(Filter(Tasks, ParentID = ThisItem.ID && Complete = 1))/ CountRows(Filter(Tasks, ParentID = ThisItem.ID)))*100, 2) & "%" */
+            Width: =290
+            X: =442
+            Y: =32
+            ZIndex: =8
+
+    Label1_7 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(50, 86, 160, 1)
+        Font: =Font.Verdana
+        FontWeight: =FontWeight.Semibold
+        Height: =57
+        Size: =30
+        Text: ="Task Management"
+        Width: =452
+        X: =70
+        Y: =24
+        ZIndex: =4
+
+    Icon3_3 As icon.Reload:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        Height: =56
+        Icon: =Icon.Reload
+        OnSelect: |
+            =Refresh([@Tasks]);
+            Refresh([@Task_Headings]);
+        Tooltip: ="Refresh"
+        Width: =51
+        X: =941
+        Y: =24
+        ZIndex: =5
+
+    Label6_7 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =1
+        Color: =RGBA(9, 33, 98, 1)
+        FocusedBorderThickness: =1
+        Font: =Font.Verdana
+        Height: =58
+        HoverBorderColor: =Self.Color
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =Self.Color
+        OnSelect: =Navigate(Dashboard_Graphical)
+        PressedBorderColor: =Self.HoverColor
+        PressedFill: =Self.HoverColor
+        Text: ="Back to Dashboard"
+        Width: =177
+        X: =724
+        Y: =24
+        ZIndex: =6
+
+    Icon6 As icon.Add:
+        Icon: =Icon.Add
+        OnSelect: |-
+            =ClearCollect(colNewTaskGroups, {Name: "", ID: 1});
+            Navigate(AddTaskGroups)
+        X: =1277
+        Y: =17
+        ZIndex: =9
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =10
+
+        Label17 As label:
+            Align: =Align.Center
+            Font: =Font.Verdana
+            FontWeight: =FontWeight.Bold
+            Height: =150
+            Size: =30
+            Text: |-
+                ="No items found. 
+                Please add a task group."
+            Visible: =!Gallery1_7.Visible
+            Width: =654
+            X: =356
+            Y: =283
+            ZIndex: =7
+
+        Button6 As button:
+            Height: =52
+            OnSelect: |-
+                =ClearCollect(colNewTaskGroups, {Name: "", ID: 1});
+                Navigate(AddTaskGroups)
+            Text: ="Add a task group"
+            Visible: =!Gallery1_7.Visible
+            Width: =177
+            X: =594
+            Y: =544
+            ZIndex: =8
+
