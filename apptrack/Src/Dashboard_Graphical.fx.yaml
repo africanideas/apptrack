@@ -1200,11 +1200,13 @@ Dashboard_Graphical As screen:
 
         Icon5 As icon.Reload:
             Color: =RGBA(136, 160, 209, 1)
+            Height: =50
             Icon: =Icon.Reload
             OnSelect: |-
                 =Refresh(Indicators);
                 Refresh(Programme);
                 Refresh(Programmes);
+            Width: =50
             X: =301
             Y: =22
             ZIndex: =8
