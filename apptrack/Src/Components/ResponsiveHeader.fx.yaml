@@ -1,0 +1,73 @@
+ResponsiveHeader As CanvasComponent:
+    BackIconVisable: =true
+    Fill: =RGBA(0, 0, 0, 0)
+    FontColour: =RGBA(0, 0, 0, 1)
+    HeaderColour: =RGBA(39, 113, 194, 1)
+    HeaderIcon1: =Home
+    HeaderIcon1Visable: =true
+    HeaderIcon2: =NextArrow
+    HeaderIcon2Visable: =true
+    HeaderText: ="Text"
+    Height: =50
+    NavScreen1: =App.ActiveScreen
+    NavScreen2: =App.ActiveScreen
+    Width: =1200
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container1 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =ResponsiveHeader.HeaderColour
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =10
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderIcon1 As icon.CheckBadge:
+            Color: =ResponsiveHeader.FontColour
+            Height: =Parent.Height-10
+            Icon: =ResponsiveHeader.HeaderIcon1
+            OnSelect: =Navigate(ResponsiveHeader.NavScreen1)
+            Visible: =ResponsiveHeader.HeaderIcon1Visable
+            Width: =HeaderIcon1.Height
+            X: =40
+            ZIndex: =1
+
+        BackIcon As icon.Home:
+            Color: =ResponsiveHeader.FontColour
+            Height: =Parent.Height-10
+            Icon: =BackArrow
+            OnSelect: =Back();
+            Visible: =ResponsiveHeader.BackIconVisable
+            Width: =BackIcon.Height
+            ZIndex: =2
+
+        NextIcon As icon.Home:
+            Color: =ResponsiveHeader.FontColour
+            Height: =Parent.Height-10
+            Icon: =ResponsiveHeader.HeaderIcon2
+            OnSelect: =Navigate(ResponsiveHeader.NavScreen2)
+            Visible: =ResponsiveHeader.HeaderIcon2Visable
+            Width: =NextIcon.Height
+            ZIndex: =3
+
+        lblHeaderText As label:
+            Align: =Align.Center
+            Color: =ResponsiveHeader.FontColour
+            FillPortions: =1
+            FontWeight: =Bold
+            Size: =15
+            Text: =ResponsiveHeader.HeaderText
+            ZIndex: =4
+
+        lblDate As label:
+            Align: =Align.Right
+            Color: =ResponsiveHeader.FontColour
+            FontWeight: =Bold
+            Size: =15
+            Text: =Today()
+            Width: =120
+            ZIndex: =5
+

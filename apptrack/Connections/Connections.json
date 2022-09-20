@@ -89,6 +89,26 @@
     ],
     "id": "385c6db1-ddff-4156-8a57-c170b9d229ab"
   },
+  "4a53ac59-6f2e-42f6-bd05-f0deeefc5b34": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1570/1.0.1570.2764/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "4a53ac59-6f2e-42f6-bd05-f0deeefc5b34"
+  },
   "5cc64499-ca20-4fd5-9ee6-9a29ed6e4758": {
     "connectionParameters": {},
     "connectionRef": {
@@ -132,6 +152,66 @@
     "dependents": [],
     "id": "5cc64499-ca20-4fd5-9ee6-9a29ed6e4758"
   },
+  "5e244d92-6c43-4a6e-9354-aefc3681b223": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-111.westeurope.logic.azure.com:443/workflows/c4d4df0f93f84f61a7fef0c78c823e41/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pW6AgnhSbTbhLrSWNhu9h3QuzszuWrlitqn_onz0uPE",
+      "workflowEndpoint": "/subscriptions/5c340b36-e0fa-450e-b6c2-cb7e0327fc56/resourceGroups/da8fdf9a79f54794af0d67a8ff281ea5-defaultda8fdf9a79f54794af0d67a8ff281ea5-env/providers/Microsoft.Logic/workflows/09ca275e-0862-63fc-df6a-15921dd148ab",
+      "workflowEntityId": "3ea8ce25-2407-ed11-82e5-000d3aa99f24",
+      "workflowName": "09ca275e-0862-63fc-df6a-15921dd148ab",
+      "workflowPath": "/subscriptions/5c340b36-e0fa-450e-b6c2-cb7e0327fc56/resourceGroups/da8fdf9a79f54794af0d67a8ff281ea5-defaultda8fdf9a79f54794af0d67a8ff281ea5-env/providers/Microsoft.Logic/workflows/09ca275e-0862-63fc-df6a-15921dd148ab"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "0e3a0f9c-fd12-49c8-a480-4466876034b9": {
+          "value": "shared_onedriveforbusiness"
+        },
+        "5d5342a5-a1de-4e28-982c-1e8fa446fcd9": {
+          "value": "shared_onedriveforbusiness_1"
+        },
+        "5e3904a8-8b47-4be6-8815-f913302ce5b6": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {
+          "value": "3ea8ce25-2407-ed11-82e5-000d3aa99f24"
+        },
+        "workflowName": {
+          "value": "09ca275e-0862-63fc-df6a-15921dd148ab"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_onedriveforbusiness": {
+          "value": "0e3a0f9c-fd12-49c8-a480-4466876034b9"
+        },
+        "shared_onedriveforbusiness_1": {
+          "value": "5d5342a5-a1de-4e28-982c-1e8fa446fcd9"
+        },
+        "shared_sharepointonline": {
+          "value": "5e3904a8-8b47-4be6-8815-f913302ce5b6"
+        },
+        "workflowEntityId": {
+          "value": "3ea8ce25-2407-ed11-82e5-000d3aa99f24"
+        },
+        "workflowName": {
+          "value": "09ca275e-0862-63fc-df6a-15921dd148ab"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PayrollPrnt"
+    ],
+    "dependencies": {
+      "shared_onedriveforbusiness": "0e3a0f9c-fd12-49c8-a480-4466876034b9",
+      "shared_onedriveforbusiness_1": "5d5342a5-a1de-4e28-982c-1e8fa446fcd9",
+      "shared_sharepointonline": "5e3904a8-8b47-4be6-8815-f913302ce5b6"
+    },
+    "dependents": [],
+    "id": "5e244d92-6c43-4a6e-9354-aefc3681b223"
+  },
   "634c741a-70c4-4fbc-82dc-68120f9d984f": {
     "connectionParameters": {
       "sku": "Enterprise"
@@ -151,6 +231,115 @@
       "5cc64499-ca20-4fd5-9ee6-9a29ed6e4758"
     ],
     "id": "634c741a-70c4-4fbc-82dc-68120f9d984f"
+  },
+  "7c1c08f0-8507-45f0-9927-c6eeb3acdb67": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1587/1.0.1587.2924/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "7c1c08f0-8507-45f0-9927-c6eeb3acdb67"
+  },
+  "848c9df2-2929-4afa-8db4-1396cdd811ec": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-187.westeurope.logic.azure.com:443/workflows/9ffe490296394125ae9ab35fdc48d27d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=JmeJDICog9vkopUzQAl4ghDn5FZst_xVc4cFoubcOVE",
+      "workflowEndpoint": "/subscriptions/b6e9a6a8-5af4-4782-980a-3b0778082707/resourceGroups/da8fdf9a79f54794af0d67a8ff281ea5-0549a9a08d144736849f32eda46829eb/providers/Microsoft.Logic/workflows/20b01e64-dc3f-46d2-88f1-4e3dfccb2be9",
+      "workflowName": "20b01e64-dc3f-46d2-88f1-4e3dfccb2be9",
+      "workflowPath": "/subscriptions/b6e9a6a8-5af4-4782-980a-3b0778082707/resourceGroups/da8fdf9a79f54794af0d67a8ff281ea5-0549a9a08d144736849f32eda46829eb/providers/Microsoft.Logic/workflows/20b01e64-dc3f-46d2-88f1-4e3dfccb2be9"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "3fb704a0-26c0-47b6-be42-9d1bae3ba98a": {
+          "value": "shared_onedriveforbusiness"
+        },
+        "6632fe15-00fb-4c0c-a240-b9156ec9fed8": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "20b01e64-dc3f-46d2-88f1-4e3dfccb2be9"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_onedriveforbusiness": {
+          "value": "3fb704a0-26c0-47b6-be42-9d1bae3ba98a"
+        },
+        "shared_sharepointonline": {
+          "value": "6632fe15-00fb-4c0c-a240-b9156ec9fed8"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "20b01e64-dc3f-46d2-88f1-4e3dfccb2be9"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PrintPayslip2"
+    ],
+    "dependencies": {
+      "shared_onedriveforbusiness": "3fb704a0-26c0-47b6-be42-9d1bae3ba98a",
+      "shared_sharepointonline": "6632fe15-00fb-4c0c-a240-b9156ec9fed8"
+    },
+    "dependents": [],
+    "id": "848c9df2-2929-4afa-8db4-1396cdd811ec"
+  },
+  "8707450b-506c-47be-8420-afdab6036572": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Bing Maps",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1567/1.0.1567.2748/bingmaps/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_bingmaps",
+      "parameterHints": {},
+      "parameterHintsV2": {},
+      "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_bingmaps/connections/098856e28adc4a71884a49bab7dcb2d7"
+    },
+    "datasets": {},
+    "dataSources": [
+      "BingMaps_1"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "8707450b-506c-47be-8420-afdab6036572"
+  },
+  "92eaaf66-5741-4b80-b8c2-3f2827d284dc": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Groups",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1563/1.0.1563.2732/office365groups/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365groups",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Groups"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "92eaaf66-5741-4b80-b8c2-3f2827d284dc"
   },
   "f266e231-4631-4ebb-b8d6-6a33f2b6c71e": {
     "connectionParameters": {

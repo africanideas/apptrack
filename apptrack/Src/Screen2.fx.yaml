@@ -2,8 +2,8 @@
 
     iconCircle1 As circle.Circle:
         Fill: =RGBA(255, 0, 0, 1)
-        X: =810
-        Y: =220
+        X: =942
+        Y: =300
         ZIndex: =1
 
     iconCheck1 As icon.Check:
@@ -14,8 +14,8 @@
         PaddingRight: =Self.PaddingTop
         PaddingTop: =24
         Width: =iconCircle1.Width
-        X: =810
-        Y: =220
+        X: =942
+        Y: =300
         ZIndex: =2
 
     LblSuccessMsg1 As label:
@@ -34,8 +34,8 @@
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(160, Self.Height - 60)
-        X: =40
-        Y: =40
+        X: =30
+        Y: =117
         ZIndex: =4
 
         Image3 As image:
@@ -97,4 +97,8 @@
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
+
+    ResponsiveHeader_1 As ResponsiveHeader:
+        Width: =Parent.Width
+        ZIndex: =5
 
