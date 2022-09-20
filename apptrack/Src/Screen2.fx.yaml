@@ -1,6 +1,7 @@
 "Screen2 As screen.'tabletLayout_Success_ver3.0'":
 
     iconCircle1 As circle.Circle:
+        Fill: =RGBA(255, 0, 0, 1)
         X: =942
         Y: =300
         ZIndex: =1
