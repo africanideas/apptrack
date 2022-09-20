@@ -20,6 +20,7 @@ ResponsiveHeader As CanvasComponent:
         Fill: =ResponsiveHeader.HeaderColour
         Height: =Parent.Height
         LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =10
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width
