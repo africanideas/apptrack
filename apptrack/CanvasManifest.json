@@ -121,6 +121,7 @@
     "AddTasks",
     "AddTaskGroups",
     "ManageTasks",
-    "SelectedTask"
+    "SelectedTask",
+    "Screen2"
   ]
 }
