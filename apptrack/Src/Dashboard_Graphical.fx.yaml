@@ -104,6 +104,8 @@ Dashboard_Graphical As screen:
             AutoHeight: =true
             Color: =RGBA(0, 18, 107, 1)
             Fill: =RGBA(241, 244, 249, 1)
+            Font: =Font.'Great Vibes'
+            FontWeight: =FontWeight.Bold
             Height: =36
             OnSelect: =Select(Parent)
             PaddingBottom: =0
