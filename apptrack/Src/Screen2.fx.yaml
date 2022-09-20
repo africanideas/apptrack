@@ -1,8 +1,9 @@
 "Screen2 As screen.'tabletLayout_Success_ver3.0'":
 
     iconCircle1 As circle.Circle:
-        X: =Parent.Width/2 - Self.Width/2
-        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        Fill: =RGBA(255, 0, 0, 1)
+        X: =810
+        Y: =220
         ZIndex: =1
 
     iconCheck1 As icon.Check:
@@ -13,8 +14,8 @@
         PaddingRight: =Self.PaddingTop
         PaddingTop: =24
         Width: =iconCircle1.Width
-        X: =Parent.Width/2 - Self.Width/2
-        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        X: =810
+        Y: =220
         ZIndex: =2
 
     LblSuccessMsg1 As label:
