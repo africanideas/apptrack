@@ -1,0 +1,10 @@
+Screen3 As screen:
+
+    Header_1 As Header:
+        Width: =1366
+
+    Spinner_1 As Spinner:
+        Height: =768
+        Visible: =Spinner_1.IsLoading
+        ZIndex: =2
+

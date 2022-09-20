@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "HasLibraryLogicalName": true,
+    "InstanceCount": 1,
+    "LibraryId": "9cedb146-80d0-446c-9d8a-3bc43c532466",
+    "LibraryLogicalName": "cat_powercatcomponentlibrary_0be3a",
+    "LibraryVersion": "2022-08-16T15:38:49Z",
+    "OriginalComponentDefinitionTemplateId": "44e7951b1fad4ad98126f8c108dd1e9f",
+    "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
+    "SourceLastTimeSaved": "2022-08-16T15:38:49.796+00:00"
+  },
+  {
+    "HasLibraryLogicalName": true,
+    "InstanceCount": 1,
+    "LibraryId": "9cedb146-80d0-446c-9d8a-3bc43c532466",
+    "LibraryLogicalName": "cat_powercatcomponentlibrary_0be3a",
+    "LibraryVersion": "2022-08-16T15:38:49Z",
+    "OriginalComponentDefinitionTemplateId": "174a744e6baa47b4857cec5814d6422e",
+    "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
+    "SourceLastTimeSaved": "2022-08-16T15:38:49.796+00:00"
+  }
+]

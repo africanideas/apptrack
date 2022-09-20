@@ -99,6 +99,8 @@
             ZIndex: =5
 
     ResponsiveHeader_1 As ResponsiveHeader:
+        BackIconVisable: =false
+        HeaderText: ="test"
         Width: =Parent.Width
         ZIndex: =5
 
