@@ -1,8 +1,8 @@
 "Screen2 As screen.'tabletLayout_Success_ver3.0'":
 
     iconCircle1 As circle.Circle:
-        X: =Parent.Width/2 - Self.Width/2
-        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        X: =942
+        Y: =300
         ZIndex: =1
 
     iconCheck1 As icon.Check:
@@ -13,8 +13,8 @@
         PaddingRight: =Self.PaddingTop
         PaddingTop: =24
         Width: =iconCircle1.Width
-        X: =Parent.Width/2 - Self.Width/2
-        Y: =(Parent.Height/2 - Self.Height/2) * .7
+        X: =942
+        Y: =300
         ZIndex: =2
 
     LblSuccessMsg1 As label:
@@ -33,8 +33,8 @@
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(160, Self.Height - 60)
-        X: =40
-        Y: =40
+        X: =30
+        Y: =117
         ZIndex: =4
 
         Image3 As image:
@@ -96,4 +96,8 @@
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
+
+    ResponsiveHeader_1 As ResponsiveHeader:
+        Width: =Parent.Width
+        ZIndex: =5
 

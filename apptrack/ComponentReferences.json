@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "HasLibraryLogicalName": true,
+    "InstanceCount": 1,
+    "LibraryId": "233bcac6-bd8a-42f6-a68e-249bf8544758",
+    "LibraryLogicalName": "cre7b_sharedcomponents_a82a9",
+    "LibraryVersion": "2022-07-25T11:55:17Z",
+    "OriginalComponentDefinitionTemplateId": "4422076764be4142877b990b17289429",
+    "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
+    "SourceLastTimeSaved": "2022-07-27T17:17:11.532+00:00"
+  }
+]
