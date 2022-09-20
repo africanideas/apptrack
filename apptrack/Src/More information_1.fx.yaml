@@ -1,0 +1,1369 @@
+"'More information_1' As screen":
+
+    FormViewer1_1 As formViewer:
+        BorderThickness: =1
+        DataSource: =Indicators
+        Height: =670
+        Item: =Gallery1_2.Selected
+        Width: =1366
+        Y: =98
+        ZIndex: =1
+
+        Comments_DataCard1_1 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Comments"
+            Default: =ThisItem.Comments
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Comments")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =0
+            Y: =11
+            ZIndex: =1
+
+            DataCardKey29_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue29_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey29_1.Y + DataCardKey29_1.Height + 5
+                ZIndex: =2
+
+        Title_DataCard1_2 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.Title
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =true
+            Width: =455
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+            DataCardKey1_2 As label:
+                AutoHeight: =true
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: ="Indicator"
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue1_2 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey1_2.Y + DataCardKey1_2.Height + 5
+                ZIndex: =2
+
+        Number_DataCard1_1 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Number"
+            Default: =ThisItem.Number
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Number")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =1
+            Y: =0
+            ZIndex: =2
+
+            DataCardKey2_2 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Indicator no."
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue2_2 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey2_2.Y + DataCardKey2_2.Height + 5
+                ZIndex: =2
+
+        "'Programme Number_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ProgrammeNumber"
+            Default: =ThisItem.'Programme Number'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"ProgrammeNumber")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =2
+            Y: =0
+            ZIndex: =2
+
+            DataCardKey3_2 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: ="Programme no."
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue3_2 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey3_2.Y + DataCardKey3_2.Height + 5
+                ZIndex: =2
+
+        "'Short Definition_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ShortDefinition"
+            Default: =ThisItem.'Short Definition'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"ShortDefinition")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            DataCardKey4_2 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue4_2 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey4_2.Y + DataCardKey4_2.Height + 5
+                ZIndex: =2
+
+        Purpose_DataCard1_1 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Purpose"
+            Default: =ThisItem.Purpose
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Purpose")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =1
+            Y: =1
+            ZIndex: =2
+
+            DataCardKey6_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue6_2 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                Italic: =true
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey6_1.Y + DataCardKey6_1.Height + 5
+                ZIndex: =2
+
+        "'Key Beneficiaries_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="KeyBeneficiaries"
+            Default: =ThisItem.'Key Beneficiaries'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"KeyBeneficiaries")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =2
+            Y: =1
+            ZIndex: =2
+
+            DataCardKey5_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue5_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey5_1.Y + DataCardKey5_1.Height + 5
+                ZIndex: =2
+
+        "'Data Source_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="SourceofData"
+            Default: =ThisItem.'Data Source'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"SourceofData")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =0
+            Y: =2
+            ZIndex: =2
+
+            DataCardKey7_2 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue7_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey7_2.Y + DataCardKey7_2.Height + 5
+                ZIndex: =2
+
+        "'Method of calculation_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Methodofcalculation"
+            Default: =ThisItem.'Method of calculation'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Methodofcalculation")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =1
+            Y: =2
+            ZIndex: =2
+
+            DataCardKey8_2 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue8_2 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey8_2.Y + DataCardKey8_2.Height + 5
+                ZIndex: =2
+
+        "'Reporting Cycle_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ReportingCycle"
+            Default: =ThisItem.'Reporting Cycle'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"ReportingCycle")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =2
+            Y: =2
+            ZIndex: =2
+
+            DataCardKey9_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue9_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey9_1.Y + DataCardKey9_1.Height + 5
+                ZIndex: =2
+
+        "'Desired Performance_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DesiredPerformance"
+            Default: =ThisItem.'Desired Performance'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"DesiredPerformance")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =0
+            Y: =3
+            ZIndex: =2
+
+            DataCardKey10_2 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue10_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey10_2.Y + DataCardKey10_2.Height + 5
+                ZIndex: =2
+
+        "'Indicator Responsibility _DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="IndicatorResponsibility"
+            Default: =ThisItem.'Indicator Responsibility '
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"IndicatorResponsibility")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =1
+            Y: =3
+            ZIndex: =2
+
+            DataCardKey11_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue11_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey11_1.Y + DataCardKey11_1.Height + 5
+                ZIndex: =2
+
+        "'Spatical Transformation_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="SpaticalTransformation"
+            Default: =ThisItem.'Spatical Transformation'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"SpaticalTransformation")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =2
+            Y: =3
+            ZIndex: =2
+
+            DataCardKey12_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue12_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey12_1.Y + DataCardKey12_1.Height + 5
+                ZIndex: =2
+
+        "'Spatical Context_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="SpaticalContext"
+            Default: =ThisItem.'Spatical Context'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"SpaticalContext")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =0
+            Y: =4
+            ZIndex: =2
+
+            DataCardKey13_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue13_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey13_1.Y + DataCardKey13_1.Height + 5
+                ZIndex: =2
+
+        "'Disaggregation of  beneficiaries  (where applicable)_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Disaggregationofbeneficiaries_x0"
+            Default: =ThisItem.'Disaggregation of  beneficiaries  (where applicable)'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Disaggregationofbeneficiaries_x0")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =1
+            Y: =4
+            ZIndex: =2
+
+            DataCardKey14_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue14_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey14_1.Y + DataCardKey14_1.Height + 5
+                ZIndex: =2
+
+        "'Recovery Plan Focus Areas_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="RecoveryPlanFocusAreas"
+            Default: =ThisItem.'Recovery Plan Focus Areas'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"RecoveryPlanFocusAreas")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =2
+            Y: =4
+            ZIndex: =2
+
+            DataCardKey15_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue15_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey15_1.Y + DataCardKey15_1.Height + 5
+                ZIndex: =2
+
+        Assumptions_DataCard1_1 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Assumptions"
+            Default: =ThisItem.Assumptions
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Assumptions")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =0
+            Y: =5
+            ZIndex: =2
+
+            DataCardKey16_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue16_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey16_1.Y + DataCardKey16_1.Height + 5
+                ZIndex: =2
+
+        "'Means of verification_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Meansofverification"
+            Default: =ThisItem.'Means of verification'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Meansofverification")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =1
+            Y: =5
+            ZIndex: =2
+
+            DataCardKey17_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue17_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey17_1.Y + DataCardKey17_1.Height + 5
+                ZIndex: =2
+
+        "'Data limitations_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Datalimitations"
+            Default: =ThisItem.'Data limitations'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Datalimitations")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =2
+            Y: =5
+            ZIndex: =2
+
+            DataCardKey18_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue18_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey18_1.Y + DataCardKey18_1.Height + 5
+                ZIndex: =2
+
+        "'Implementation Data AOP_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ImplementationDataAOP"
+            Default: =ThisItem.'Implementation Data AOP'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"ImplementationDataAOP")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =0
+            Y: =6
+            ZIndex: =2
+
+            DataCardKey22_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue22_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                FontWeight: =FontWeight.Bold
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =20
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey22_1.Y + DataCardKey22_1.Height + 5
+                ZIndex: =2
+
+        Year_DataCard1_1 As typedDataCard.textualViewCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Year"
+            Default: =ThisItem.Year
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Year")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =1
+            Y: =6
+            ZIndex: =2
+
+            DataCardKey34_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue34_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey34_1.Y + DataCardKey34_1.Height + 5
+                ZIndex: =2
+
+        "'Q1 Target_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Q1Target"
+            Default: =ThisItem.'Q1 Target'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Q1Target")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =2
+            Y: =6
+            ZIndex: =2
+
+            DataCardKey23_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue23_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey23_1.Y + DataCardKey23_1.Height + 5
+                ZIndex: =2
+
+        "'Q1 Actual Target_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Q1ActualTarget"
+            Default: =ThisItem.'Q1 Actual'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Q1ActualTarget")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =0
+            Y: =7
+            ZIndex: =2
+
+            DataCardKey30_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue30_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey30_1.Y + DataCardKey30_1.Height + 5
+                ZIndex: =2
+
+        "'Q2 Target_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Q2Target"
+            Default: =ThisItem.'Q2 Target'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Q2Target")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =1
+            Y: =7
+            ZIndex: =2
+
+            DataCardKey24_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue24_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey24_1.Y + DataCardKey24_1.Height + 5
+                ZIndex: =2
+
+        "'Q2 Actual Target_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Q2ActualTarget"
+            Default: =ThisItem.'Q2 Actual'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Q2ActualTarget")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =2
+            Y: =7
+            ZIndex: =2
+
+            DataCardKey31_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue31_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey31_1.Y + DataCardKey31_1.Height + 5
+                ZIndex: =2
+
+        "'Q3 Target_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Q3Target"
+            Default: =ThisItem.'Q3 Target'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Q3Target")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =0
+            Y: =8
+            ZIndex: =2
+
+            DataCardKey25_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue25_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey25_1.Y + DataCardKey25_1.Height + 5
+                ZIndex: =2
+
+        "'Q3 Actual Target_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Q3ActualTarget"
+            Default: =ThisItem.'Q3 Actual'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Q3ActualTarget")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =1
+            Y: =8
+            ZIndex: =2
+
+            DataCardKey32_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue32_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey32_1.Y + DataCardKey32_1.Height + 5
+                ZIndex: =2
+
+        "'Q4 Target_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Q4Target"
+            Default: =ThisItem.'Q4 Target'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Q4Target")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =2
+            Y: =8
+            ZIndex: =2
+
+            DataCardKey26_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue26_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey26_1.Y + DataCardKey26_1.Height + 5
+                ZIndex: =2
+
+        "'Q4 Actual Target_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Q4ActualTarget"
+            Default: =ThisItem.'Q4 Actual'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Q4ActualTarget")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =0
+            Y: =9
+            ZIndex: =2
+
+            DataCardKey33_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue33_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey33_1.Y + DataCardKey33_1.Height + 5
+                ZIndex: =2
+
+        "'Annual Target_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="AnnualTarget"
+            Default: =ThisItem.'Annual Target'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"AnnualTarget")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =1
+            Y: =9
+            ZIndex: =2
+
+            DataCardKey27_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue27_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey27_1.Y + DataCardKey27_1.Height + 5
+                ZIndex: =2
+
+        "'Target for MTFS_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TargetforMTFS"
+            Default: =ThisItem.'Target for MTFS'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"TargetforMTFS")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =2
+            Y: =9
+            ZIndex: =2
+
+            DataCardKey28_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue28_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey28_1.Y + DataCardKey28_1.Height + 5
+                ZIndex: =2
+
+        "'Demand Driven Indicator?_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="DemandDrivenIndicator_x003f_"
+            Default: =ThisItem.'Demand Driven Indicator?'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"DemandDrivenIndicator_x003f_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =0
+            Y: =10
+            ZIndex: =2
+
+            DataCardKey20_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue20_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey20_1.Y + DataCardKey20_1.Height + 5
+                ZIndex: =2
+
+        "'Service Delivery Indicator?_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ServiceDeliveryIndicator_x003f_"
+            Default: =ThisItem.'Service Delivery Indicator?'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"ServiceDeliveryIndicator_x003f_")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =1
+            Y: =10
+            ZIndex: =2
+
+            DataCardKey19_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue19_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey19_1.Y + DataCardKey19_1.Height + 5
+                ZIndex: =2
+
+        "'Covid-19 Linkage_DataCard1_1' As typedDataCard.textualViewCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Covid_x002d_19Linkage"
+            Default: =ThisItem.'Covid-19 Linkage'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Indicators],DataSourceInfo.DisplayName,"Covid_x002d_19Linkage")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =40
+            Required: =false
+            Width: =455
+            X: =2
+            Y: =10
+            ZIndex: =2
+
+            DataCardKey21_1 As label:
+                AutoHeight: =true
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue21_1 As label:
+                AutoHeight: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =27
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Default
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey21_1.Y + DataCardKey21_1.Height + 5
+                ZIndex: =2
+
+    Icon1_9 As icon.BackArrow:
+        Color: =RGBA(136, 160, 209, 1)
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(Dashboard_Graphical)
+        X: =12
+        Y: =16
+        ZIndex: =2
+
+    Image1_5 As image:
+        Height: =94
+        Image: ='western-cape-department-of-human-settlements_orig'
+        Transparency: =0.5
+        Width: =241
+        X: =1125
+        ZIndex: =3
+
+    Button2_4 As button:
+        Fill: =RGBA(136, 160, 209, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =64
+        OnSelect: =Navigate('Annual info_2')
+        Size: =17
+        Text: ="View multi year data"
+        Width: =263
+        X: =511
+        Y: =16
+        ZIndex: =4
+
+    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Items: =["test", "test2", "test3"]
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(160, Self.Height - 60)
+        X: =40
+        Y: =40
+        ZIndex: =5
+
+        Image2 As image:
+            Height: =128
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image2.Width - 104
+            X: =Image2.X + Image2.Width + 24
+            Y: =44
+            ZIndex: =2
+
+        Subtitle1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title1.Width
+            X: =Title1.X
+            Y: =Title1.Y + Title1.Height + 4
+            ZIndex: =3
+
+        NextArrow1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
