@@ -151,17 +151,17 @@
         {
           "Category": "Design",
           "PropertyName": "ZIndex",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
           "PropertyName": "Y",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -171,7 +171,7 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Behavior",
@@ -301,11 +301,6 @@
         {
           "Category": "Design",
           "PropertyName": "Y",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "DisplayMode",
           "RuleProviderType": "Unknown"
         },
         {
@@ -2281,11 +2276,6 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "DisplayMode",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
           "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         },
@@ -2449,11 +2439,6 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "DisplayMode",
           "RuleProviderType": "Unknown"
         },
         {
